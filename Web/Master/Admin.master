@@ -1,0 +1,192 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>未命名頁面</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style7
+        {
+            width: 149px;
+            height: 30px;
+        }
+        .style6
+        {
+            width: 867px;
+            height: 30px;
+            text-align: left;
+        }
+        .style8
+        {
+            width: 149px;
+             padding-top:5px;
+            height: 529px;
+            text-align: left;
+        }
+        .style5
+        {
+            width: 867px;
+        }
+        .style2
+        {
+            width: 149px;
+        }
+        .style9
+        {
+            height: 88px;
+        }
+        .style10
+        {
+            width: 222px;
+        }
+        .style11
+        {
+            width: 867px;
+            height: 529px;
+        }
+        .styleBackground 
+        {
+            margin:0;
+            padding:0;
+        }
+        .styleBackFont 
+        {
+             margin:0;
+            padding:0;
+        }
+        .styleBackground
+        {
+            background-color:#3d6d57;
+           
+            width:auto;
+            text-align:center;
+            padding-bottom:1px;
+            padding-top:1px;
+        }
+        .styleBox 
+        {
+            margin-left:100px;
+            margin-right:500px;
+        }
+        .styleBackFont 
+        {
+            font-size:40px;
+            font-weight:bold;
+        }
+        .styleBox2 
+        {
+            background-color:#e2d5d5;
+        }
+        </style>
+</head>
+<body>
+   <form id="form1" runat="server">       
+     <table style="width:100%">
+        <tr>
+         <td>&nbsp;</td>
+         <td style="text-align: right">
+             <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                 <Items>
+                     <asp:MenuItem ImageUrl="~/Images/home.gif" NavigateUrl="~/Book/Main.aspx" 
+                         Text="书店首页&nbsp;&nbsp;" Value="书店首页">
+                    </asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/Admin/AdminLogin.aspx" Text="退出" Value="退出" 
+                         ImageUrl="~/Images/h5.gif">
+                     </asp:MenuItem>
+                 </Items>
+             </asp:Menu>
+         </td>
+        </tr>
+     </table>
+ <!--    <div style="text-align:center">
+       <table>
+        <tr>
+        <td class="style9">
+            <table align="center" cellpadding="0" cellspacing="0" style="width: 1024px; height: 79px;">
+               <tr>
+                <td class="style10">
+                  <img alt="" src='<%= ResolveUrl("../Images/logo2.jpg") %>' /></td>
+               <td>
+                  <img alt="" src='<%= ResolveUrl("../Images/top_2-1.jpg") %>' /></td>
+               </tr>
+           </table>     
+            
+       </td>
+       </tr>
+           </table></div>     -->
+       <div class ="styleBackground">
+                        <div class ="styleBox">
+                            <div class ="styleBackFont" >
+                                <p style="font-family:'Lao UI';font-size:30px;">DreamStar平台</p>
+
+                            </div>
+                            </div> 
+         </div>
+       <div style="text-align:center">
+       <table>
+       <tr>
+         <td>
+           <table align="center" cellpadding="0" cellspacing="0" style="width: 1024px;">
+              <tr>
+                 <td class="style7">
+                    <img alt="" src='<%= ResolveUrl("../Images/menu-top.jpg") %>' /></td>
+                 <td class="style6">
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     您现在的位置：<asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                    </asp:SiteMapPath>
+                 </td>
+             </tr>
+             <tr>
+               <td valign="top" class="style8" bgcolor="#BBE188">
+                      <asp:TreeView ID="TreeViewLeft" runat="server">
+                          <Nodes>
+                              <asp:TreeNode Expanded="True" SelectAction="Expand" Text="管理员控制面板" 
+                             Value="管理员控制面板">
+                                  <asp:TreeNode SelectAction="Expand" Text="用户管理" Value="用户管理">
+                                      <asp:TreeNode Text="添加用户" Value="添加用户" NavigateUrl="~/Admin/UserAdd.aspx">
+                                      </asp:TreeNode>
+                                      <asp:TreeNode Text="用户列表" Value="用户列表" NavigateUrl="~/Admin/ListAllUsers.aspx">
+                                      </asp:TreeNode>
+                                  </asp:TreeNode>
+                                  <asp:TreeNode SelectAction="Expand" Text="图书管理" Value="图书管理">
+                                      <asp:TreeNode Text="添加图书" Value="添加图书" NavigateUrl="~/Admin/BookAdd.aspx">
+                                      </asp:TreeNode>
+                                      <asp:TreeNode Text="添加图书分类" Value="添加图书分类" NavigateUrl="~/Admin/BookCategoryAdd.aspx">
+                                      </asp:TreeNode>
+                                      <asp:TreeNode Text="图书列表" Value="图书列表" NavigateUrl="~/Admin/ListAllBooks.aspx">
+                                      </asp:TreeNode>
+                                  </asp:TreeNode>
+                                  <asp:TreeNode SelectAction="Expand" Text="订单管理" Value="订单管理">
+                                      <asp:TreeNode Text="审核订单" Value="审核订单" NavigateUrl="~/Admin/ListAllOrders.aspx">
+                                      </asp:TreeNode>
+                                  </asp:TreeNode>
+                                   <asp:TreeNode SelectAction="Expand" Text="通知管理" Value="通知管理">
+                                      <asp:TreeNode Text="增删通知" Value="增删通知" NavigateUrl="~/Admin/NoticeAdd.aspx">
+                                      </asp:TreeNode>
+                                  </asp:TreeNode>
+                              </asp:TreeNode>
+                              
+                          </Nodes>
+                      </asp:TreeView>
+                  </td>
+               <td class="style11" valign="top">
+                  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                  </asp:ContentPlaceHolder>
+               </td>
+            </tr>
+            <tr>
+             <td class="style2">
+               <img src='<%= ResolveUrl("../Images/menu-bottom.jpg") %>'/></td>
+            <td class="style5">&nbsp;</td>
+           </tr>
+        </table>
+      </td>
+   </tr>
+  </table>             
+ </div>
+</form>
+</body>
+</html>

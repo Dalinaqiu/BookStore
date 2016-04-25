@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title="DreamStar平台"  description="">
+      <siteMapNode url="~/Book/Main.aspx" title="首页"  description="">
+        <siteMapNode url="~/Book/BookList.aspx" title="图书列表"  description="">         
+         <siteMapNode url="~/Book/BookDetail.aspx" title="图书详情"  description="" />
+          <siteMapNode url="~/Book/BookCar.aspx" title="购物车"  description="" />
+          <siteMapNode url="~/Book/BookOrder.aspx" title="结算中心"  description="" />
+          <siteMapNode url="~/Book/RedactMyOrder.aspx" title="添加订单"  description="" />
+        </siteMapNode>
+          <siteMapNode url="~/MemberShip/UserRoom.aspx" title="用户中心"  description="">
+			  <siteMapNode url="~/MemberShip/MyOrder.aspx" title="我的订单"  description="">
+				  <siteMapNode url="~/MemberShip/MyOrderDetail.aspx" title="我的订单详情"  description="" />
+			  </siteMapNode>
+			  <siteMapNode url="~/MemberShip/UpdatePassWord.aspx" title="更新我的密码"  description="" />
+			  <siteMapNode url="~/MemberShip/UpdateMyMessage.aspx" title="更新我的信息"  description="" />
+       </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/Admin/AdminMain.aspx" title="后台管理首页"  description="">               
+      </siteMapNode>
+      <siteMapNode url="" title="用户管理"  description="">
+          <siteMapNode url="~/Admin/ListAllUsers.aspx" title="用户列表"  description="" />
+          <siteMapNode url="~/Admin/UserDetail.aspx" title="用户详情"  description="" />
+        <siteMapNode url="~/Admin/UserAdd.aspx" title="用户添加"  description="" />
+        </siteMapNode>
+      <siteMapNode url="" title="图书管理"  description="">
+        <siteMapNode url="~/Admin/ListAllBooks.aspx" title="图书列表"  description="" />
+        <siteMapNode url="~/Admin/BookAdd.aspx" title="图书添加或修改"  description="" />
+        <siteMapNode url="~/Admin/BookCategoryAdd.aspx" title="图书分类列表"  description="" />
+      </siteMapNode>
+      <siteMapNode url="" title="订单管理"  description="">
+        <siteMapNode url="~/Admin/ListAllOrders.aspx" title="订单列表"  description="" />
+        <siteMapNode url="~/Admin/OrderDetail.aspx" title="订单详情"  description="" />
+      </siteMapNode>
+
+    </siteMapNode>
+</siteMap>
